@@ -5,6 +5,10 @@ BASE = Path(__file__).parent
 FILES = {
     "/": ("index.html", "text/html"),
     "/style.css": ("style.css", "text/css"),
+    **{
+        f"/images/{fruit}.svg": (f"images/{fruit}.svg", "image/svg+xml")
+        for fruit in ("apple", "banana", "orange", "grapes", "strawberry")
+    },
 }
 
 
